@@ -1,10 +1,8 @@
-version: '3'
+version: "3"
+
 services:
   python:
-    restart: always
-    build: .
-    container_name: 'Jupyter'
-    working_dir: '/root/app'
-    tty: true
+    build: ./
     volumes:
-      - ./app:/root/app
+      - ./:/mnt
+    tty: true
